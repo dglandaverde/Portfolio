@@ -3,7 +3,7 @@
 
 /* General */
 * {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Nunito", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,34 +20,31 @@
 
 html {
   font-size: 62.5%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
-  display: flex;
-  justify-content: center;
   background-color: var(--bg-color);
   color: var(--main-color);
-  margin: 0 1rem; /* Espaciado general */
 }
 
 section {
   min-height: 100vh;
-  padding: 10rem 9% 2rem;
-  justify-content: center;
+  padding: 20rem 9% 2rem;
+  
 }
+
+/* HEADER DESIGN */
 
 .header {
   position: fixed;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 4rem); /* Resta espacio para evitar tocar los bordes */
-  max-width: 1200px;
-  padding: 0.3rem 2rem;
+  padding: 1.7rem 2rem;
   background-color: rgba(25, 25, 25, 0.7);
+  transform: translateX(-50%);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   backdrop-filter: blur(10px);
   z-index: 100;
@@ -56,23 +53,20 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-
-.logo {
-  cursor: pointer;
-  margin: 0 2rem;
+.header.sticky {
+  border-bottom: .1rem solid rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
-  flex-grow: 1;
-  display: flex;
-  justify-content: flex-end;
+  display: flex; /* Organiza los enlaces en una fila */
+  gap: 2rem; /* Espacio entre enlaces */
 }
 
 .navbar a {
   font-size: 1.5rem;
-  font-weight: 700;
   color: var(--main-color);
-  margin: 0 2rem;
+  margin: auto 2rem;
+  font-weight: 700;
   transition: font-size 0.2s ease;
 }
 
@@ -83,107 +77,14 @@ section {
 
 #menu-icon {
   display: none;
-  font-size: 3rem;
-  color: var(--text-color);
-  cursor: pointer;
-  padding: 1rem;
-}
-
-
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .navbar {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: calc(100% + 0.5rem); /* Debajo del header */
-    right: 0; /* Alinear al lado derecho del header */
-    max-width: 300px; /* Ancho máximo del menú */
-    width: auto; /* Ajusta automáticamente al contenido */
-    background-color: rgba(25, 25, 25, 0.9);
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 150; /* Encima del header */
-    
-  }
-
-  .navbar.show {
-    display: flex;
-    
-  }
-
-  .navbar a {
-    margin: 1rem 0;
-    text-align: center;
-  }
-
-  #menu-icon {
-    display: block;
-  }
-
-  .header {
-    justify-content: space-between;
-  }
-}
-
-/* .header {
-  position: fixed;
-  top: 0;
-  width: 70%;
-  padding: 0.3rem 0.3rem;
-  background-color: rgba(25, 25, 25, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(10px);
-  z-index: 100;
-  margin: 2rem 0;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.logo {
-  cursor: pointer;
-  justify-content: left;
-  margin: 0 2rem;
-}
-.navbar {
-  flex-grow: 1;
-  display: flex;
-  justify-content: right;
-}
-
-.navbar a {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 2.5rem;
   color: var(--main-color);
-  margin: 0 4rem;
-  transition: font-size 0.2s ease;
-}
-.navbar a:hover,
-.navbar a.active {
-  color: var(--text-color);
+  cursor: pointer;
 }
 
-#menu-icon {
-  display: none;
-  font-size: 3.6rem;
-  color: var(--text-color);
-} */
+/* HOME SECTIONS DESIGNN */
 
-
-.container {
-   display: flex;
-   flex-wrap: wrap; 
-   justify-content: space-between;
-   align-items: center;
-   max-width: 90%; 
-   margin: 0 auto; 
-   padding: 0 2rem; 
- }
- .home-content {
+.home-content {
    display: flex;
    flex-direction: column; 
    align-items: center; 
@@ -195,13 +96,13 @@ section {
 .home {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
 }
 
 .home-content h3 {
   font-size: 3.2rem;
-  font-weight: 600;
-  padding: 1.5rem;
+  font-weight: 700;
+  padding: 1.2rem;
 }
 
 .home-content h3:nth-of-type(2) {
@@ -214,7 +115,7 @@ span {
 
 .home-content h2 {
   font-size: 5.6rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.3;
 }
 
@@ -223,12 +124,6 @@ span {
   height: auto;
   border-radius: 100%;
   animation: floatImage 4s ease-in-out infinite;
-}
-
-.home-img {
-  flex: 1; /* Ocupa el espacio restante para la imagen */
-  display: flex;
-  justify-content: center;
 }
 
 @keyframes floatImage {
@@ -241,14 +136,6 @@ span {
   100% {
     transform: translateY(0);
   }
-}
-
-.home-content p {
-  font-size: 1.8rem;
-  max-width: 50rem;
-  margin: 2rem 2rem 0 0;
-  line-height: 1.6;
-  text-align: justify;
 }
 
 .social-media a {
@@ -270,6 +157,7 @@ span {
   background: var(--text-color);
   color: var(--bg-color);
   transform: scale(1.1);
+  box-shadow: 0 0 0.5rem var(--text-color);
 }
 
 .social-media a:active {
@@ -286,18 +174,40 @@ span {
   color: var(--text-color);
   letter-spacing: 1px;
   font-weight: 600;
-  transition: 0.3s ease; /* Transición más rápida */
+  transition: 0.5s ease;
   margin-top: 2rem;
 }
 
 .btn-cv:hover {
   background: var(--text-color);
   color: var(--bg-color);
-  transform: scale(1.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 0.5rem var(--text-color);
 }
 
 .btn-cv:active {
-  transform: scale(0.9);
+  transform: scale(1);
 }
 
+/* ABOUT SECTIONS DESIGN */
 
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-img img {
+  width: 35vw;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+}
