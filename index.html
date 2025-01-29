@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/logo.svg" type="image/x-icon" />
     <!-- Font - Awesome -->
@@ -20,19 +20,17 @@
   </head>
   <body>
     <!-- HEADER DESIGN -->
-      <header class="header">
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
-        <nav class="navbar">
-          <a href="#home" class="active">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#services">Services</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
-    
-    
+    <header class="header">
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
     <!-- HOME SECTIONS DESIGN -->
     <section class="home" id="home">
@@ -54,7 +52,7 @@
             <i class="fa-brands fa-instagram"></i>
           </a>
         </div>
-        <a href="#" class="btn-cv">Download CV</a>
+        <a href="#" class="btn">Download CV</a>
       </div>
 
       <div class="home-img">
@@ -63,23 +61,53 @@
     </section>
 
     <!-- ABOUT SECTIONS DESIGN -->
+    <section class="about" id="about">
+      <div class="about-container">
+        <div class="about-content">
+          <img src="assets/home-img.png" alt="about-img" />
+          <div class="text-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <p>
+              Web developer specialized in creating dynamic and scalable applications
+              with technologies such as React, Node.js, and MongoDB. I am passionate
+              about transforming ideas into functional, optimized projects focused on
+              user experience. I always seek to innovate, learn and offer high-quality
+              solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
 
-  <section class="about" id="about">
-    <div class="about-img">
-      <img src="assets/home-img.png" alt="about-img" />
-    </div>
-
-    <div class="about-content">
-      <h2 class="heading">About <span>Me</span></h2>
-      <p>
-        Web developer specialized in creating dynamic and scalable
-        applications with technologies such as React, Node.js and MongoDB. I
-        am passionate about transforming ideas into functional, optimized
-        projects focused on user experience. I always seek to innovate, learn
-        and offer high quality solutions.
-      </p>
-    </div>
-  </section>
+    <!-- SERVICES SECTIONS DESIGN -->
+    <section class="services" id="services">
+      <div class="services-wrapper"> <!-- Contenedor adicional -->
+        <h2 class="heading">My <span>Services</span></h2>
+        <div class="services-container">
+          <!-- 1 -->
+          <div class="services-box">
+            <i class="fa-solid fa-code"></i>
+            <h3>Web Development</h3>
+          </div>
+          <!-- 2 -->
+          <div class="services-box">
+            <i class="fa-brands fa-android"></i>
+            <h3>App Mobile Development</h3>
+          </div>
+          <!-- 3 -->
+          <div class="services-box">
+            <i class="fa-solid fa-database"></i>
+            <h3>Database Development</h3>
+          </div>
+          <!-- 4 -->
+          <div class="services-box">
+            <i class="fa-solid fa-desktop"></i>
+            <h3>Desktop Application</h3>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="JS/main.js"></script>
   </body>
 </html>

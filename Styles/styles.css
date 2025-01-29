@@ -30,8 +30,9 @@ body {
 
 section {
   min-height: 100vh;
-  padding: 20rem 9% 2rem;
-  
+  padding: 2rem 9% 2rem;
+  padding-top: 300px; /* Ajusta este valor según el alto de tu navbar */
+  margin-top: -100px; /* Ajusta este valor según el alto de tu navbar */
 }
 
 /* HEADER DESIGN */
@@ -54,7 +55,7 @@ section {
 }
 
 .header.sticky {
-  border-bottom: .1rem solid rgba(0, 0, 0, 0.2);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
@@ -85,13 +86,13 @@ section {
 /* HOME SECTIONS DESIGNN */
 
 .home-content {
-   display: flex;
-   flex-direction: column; 
-   align-items: center; 
-   text-align: center; 
-   max-width: 80%; 
-   padding: 0 1rem;
- }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+  padding: 0 1rem;
+}
 
 .home {
   display: flex;
@@ -120,7 +121,7 @@ span {
 }
 
 .home-img img {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   border-radius: 100%;
   animation: floatImage 4s ease-in-out infinite;
@@ -164,7 +165,7 @@ span {
   box-shadow: none; /* Elimina el box-shadow al hacer clic */
   transform: scale(1); /* Restaura el tamaño del botón al hacer clic */
 }
-.btn-cv {
+.btn {
   display: inline-block;
   padding: 1rem 1.8rem;
   background: transparent;
@@ -178,36 +179,131 @@ span {
   margin-top: 2rem;
 }
 
-.btn-cv:hover {
+.btn:hover {
   background: var(--text-color);
   color: var(--bg-color);
   transform: scale(1.05);
   box-shadow: 0 0 0.5rem var(--text-color);
 }
 
-.btn-cv:active {
+.btn:active {
   transform: scale(1);
 }
 
 /* ABOUT SECTIONS DESIGN */
 
-.about {
+.about-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px; /* Evita que se expanda demasiado */
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
-.about-img img {
-  width: 35vw;
+.about-container div {
+  flex: 1; /* Toma el espacio disponible */
+  padding: 2rem;
+  background: rgba(25, 25, 25, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease;
+  margin: 1rem; /* Separación entre los elementos */
 }
 
-.heading {
-  text-align: center;
-  font-size: 4.5rem;
+.about-container div:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.about-content h2 {
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem; /* Mantiene una separación constante entre la imagen y el texto */
+  width: 100%;
+  flex-grow: 1; /* Mantiene el espacio proporcionado */
+}
+
+.about-content img {
+  width: 40%; /* Tamaño controlado */
+  max-width: 300px; /* No crece más allá de 300px */
+  height: auto;
+  border-radius: 20px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  max-width: 500px; /* Evita que el texto se expanda demasiado */
+}
+
+.text-content h2 {
   text-align: left;
   line-height: 1.2;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  font-size: 1.8rem;
+  margin: 0;
+  text-align: justify;
+}
+
+
+
+/* SERVICES SECTIONS DESIGN */
+
+.services h2 {
+  margin-bottom: 3rem;
+  text-align: left;
+  font-size: 3.5rem;
+}
+
+.services-wrapper {
+  max-width: 1000px; /* Límite de ancho para que no se estire */
+  margin: 0 auto; /* Centrar el contenedor */
+  padding: 0 2rem;
+}
+
+.services-container {
+  display: grid; /* Usamos grid para las columnas */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Columnas responsivas */
+  gap: 2rem; /* Espacio entre las cajas */
+  justify-items: center; /* Centrar los elementos dentro de cada celda */
+}
+
+.services-container .services-box {
+  display: flex; /* Usamos flexbox para alinear íconos y texto */
+  align-items: center; /* Alineación vertical */
+  padding: 3rem 2rem 3rem;
+  background: rgba(25, 25, 25, 0.7);
+  justify-content: center;
+  border-radius: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Alineación del texto a la izquierda */
+  transition: 0.5s ease;
+  width: 100%; /* Asegura que las cajas ocupen todo el espacio disponible */
+}
+
+.services-container .services-box:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.services-box i {
+  font-size: 2rem; /* Tamaño del icono */
+  color: var(--text-color);
+  margin-right: 1rem; /* Espacio entre el ícono y el texto */
+}
+
+.services-box h3 {
+  font-size: 1.5rem;
+  color: #fff; /* Aseguramos contraste con el fondo */
 }
