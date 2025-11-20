@@ -1,0 +1,26 @@
+# Keycloak Runtime Files
+*.log
+*.pid
+
+# Backup files
+*.bak
+*~
+
+# Temporary files
+*.tmp
+temp/
+tmp/
+
+# Local configuration overrides
+*-local.bat
+local-config.bat
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Files
+Thumbs.db
+.DS_Store
