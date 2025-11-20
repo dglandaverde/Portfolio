@@ -1,65 +1,127 @@
+/* ============================================
+   PORTFOLIO - MAIN JAVASCRIPT
+   Mobile Menu, Navigation & Contact Form
+   ============================================ */
+
+// ============================================
+// Mobile Menu Toggle
+// ============================================
 const menuIcon = document.getElementById('menu-icon');
 const navbar = document.querySelector('.navbar');
 
-menuIcon.addEventListener('click', () => {
-  navbar.classList.toggle('active');
+if (menuIcon && navbar) {
+  menuIcon.addEventListener('click', () => {
+    const isActive = navbar.classList.toggle('active');
+    menuIcon.setAttribute('aria-expanded', isActive);
+  });
+
+  // Close menu when clicking on a nav link (better UX on mobile)
+  const navLinks = navbar.querySelectorAll('a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navbar.classList.remove('active');
+      menuIcon.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && !menuIcon.contains(e.target)) {
+      navbar.classList.remove('active');
+      menuIcon.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+// ============================================
+// Active Navigation Link on Scroll
+// ============================================
+const sections = document.querySelectorAll('section');
+const navLinksAll = document.querySelectorAll('.navbar a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= (sectionTop - 150)) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinksAll.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
 });
 
-
-
-
-
-
+// ============================================
+// EmailJS Configuration & Contact Form
+// ============================================
 emailjs.init({
   publicKey: 'K64adrKEjSfiP2FDz',
-  // Do not allow headless browsers
   blockHeadless: true,
   blockList: {
-    // Block the suspended emails
     list: ['foo@emailjs.com', 'bar@emailjs.com'],
-    // The variable contains the email address
     watchVariable: 'userEmail',
   },
   limitRate: {
-    // Set the limit rate for the application
     id: 'app',
-    // Allow 1 request per 10s
-    throttle: 1000,
+    throttle: 10000,
   },
 });
 
-const form = document.querySelector('contact-form');
-const nameUser = document.querySelector('.name');
-const emailUser = document.querySelector('.email');
-const messageUser = document.querySelector('.message');
+// Form Elements - CORRECTED SELECTORS
+const form = document.querySelector('.contact-form');
+const nameUser = document.getElementById('name');
+const emailUser = document.getElementById('email');
+const messageUser = document.getElementById('message');
+const btnSend = document.getElementById('btn-send');
 
 const serviceID = 'service_k8pryh5';
 const templateID = 'template_er0wv3l';
-const publicKey = 'K64adrKEjSfiP2FDz';
 
-emailjs.init(publicKey);
+if (form && nameUser && emailUser && messageUser) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  const inputData = {
-    from_name: nameUser.value,
-    user_email: emailUser.value,
-    user_message: messageUser.value,
-  };
-
-  emailjs.send(serviceID, templateID, inputData).then(
-    () => {
-      nameUser.value = '';
-      emailUser.value = '';
-      messageUser.value = '';
-      alert('Your message has been sent successfully!');
-    },
-    (err) => {
-      alert(JSON.stringify(err));
+    // Disable button during sending
+    if (btnSend) {
+      btnSend.disabled = true;
+      btnSend.textContent = 'Sending...';
     }
-  );
-});
+
+    const inputData = {
+      from_name: nameUser.value,
+      user_email: emailUser.value,
+      user_message: messageUser.value,
+    };
+
+    emailjs.send(serviceID, templateID, inputData)
+      .then(() => {
+        // Success
+        nameUser.value = '';
+        emailUser.value = '';
+        messageUser.value = '';
+        alert('✅ Your message has been sent successfully!');
+      })
+      .catch((err) => {
+        // Error
+        console.error('EmailJS Error:', err);
+        alert('❌ Failed to send message. Please try again later.');
+      })
+      .finally(() => {
+        // Re-enable button
+        if (btnSend) {
+          btnSend.disabled = false;
+          btnSend.textContent = 'Enviar Mensaje';
+        }
+      });
+  });
+}
 
 
 
