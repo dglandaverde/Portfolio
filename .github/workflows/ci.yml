@@ -1,0 +1,80 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Un push nuevo sobre la misma rama cancela la ejecución anterior:
+# no tiene sentido gastar minutos validando un commit ya superado.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Tipos · Lint · Formato
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: package.json
+          cache: npm
+
+      # `npm ci` respeta package-lock.json al pie de la letra: el build de CI
+      # instala exactamente lo mismo que se probó en local.
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Comprobar tipos
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Formato
+        run: npm run format:check
+
+  build:
+    name: Build de producción
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: quality
+
+    # El build no envía correos: sólo necesita que las variables existan y
+    # pasen el esquema. Los secretos reales se configuran en Vercel, nunca
+    # aquí. Esta URL es pública y sirve para que el sitemap y las etiquetas
+    # canónicas se generen con una dirección válida durante la verificación.
+    env:
+      NEXT_PUBLIC_SITE_URL: https://portfolio-nu-eosin-11.vercel.app
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: package.json
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # Red de seguridad: si algún día alguien mueve un secreto a una variable
+      # NEXT_PUBLIC_, este paso rompe el pipeline antes del despliegue.
+      - name: Verificar que no se filtran secretos al cliente
+        run: |
+          if grep -rIl --exclude-dir=node_modules -E 'RESEND_API_KEY|re_[A-Za-z0-9]{20,}' .next/static/ 2>/dev/null; then
+            echo "::error::Se encontró un posible secreto en el bundle del cliente"
+            exit 1
+          fi
+          echo "✓ Sin secretos en .next/static/"

@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "title": "Dennis Landaverde — Software Engineer",
+    "titleTemplate": "%s · Dennis Landaverde",
+    "description": "Software Engineer full stack. Construyo interfaces con Angular y React, servicios con Java y Quarkus, y sistemas corporativos sobre Oracle Database y JD Edwards.",
+    "keywords": "Dennis Landaverde, Software Engineer, Desarrollador Full Stack, Angular, React, TypeScript, Java, Quarkus, Oracle Database, JD Edwards, El Salvador",
+    "ogAlt": "Dennis Landaverde — Software Engineer"
+  },
+  "nav": {
+    "ariaLabel": "Navegación principal",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú",
+    "skipToContent": "Saltar al contenido principal",
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "localeSwitcher": {
+    "label": "Cambiar idioma",
+    "current": "Idioma actual: {locale}"
+  },
+  "theme": {
+    "label": "Cambiar tema",
+    "light": "Tema claro",
+    "dark": "Tema oscuro",
+    "system": "Tema del sistema"
+  },
+  "hero": {
+    "greeting": "Hola,",
+    "title": "Bienvenido",
+    "roleIntro": "Soy",
+    "role": "Software Engineer",
+    "tagline": "Convierto ideas en productos digitales rápidos, accesibles y hechos para durar.",
+    "downloadCv": "Descargar CV",
+    "contactCta": "Hablemos",
+    "portraitAlt": "Dennis Landaverde, Software Engineer",
+    "socialLabel": "Perfiles sociales"
+  },
+  "about": {
+    "titleLead": "Sobre",
+    "titleAccent": "mí",
+    "body": "Ingeniero de software full stack. Levanto interfaces con Angular y React y las respaldo con servicios en Java y Quarkus. En el lado corporativo trabajo con Oracle Database y JD Edwards, donde el reto no es sólo escribir código sino entender el proceso de negocio que hay detrás.",
+    "highlights": {
+      "focusTitle": "Enfoque en producto",
+      "focusBody": "Cada decisión técnica se evalúa por lo que aporta a quien usa el producto, no por la moda del momento.",
+      "qualityTitle": "Calidad de código",
+      "qualityBody": "Tipado estricto, revisiones y pruebas: código que otra persona pueda mantener dentro de un año.",
+      "performanceTitle": "Rendimiento",
+      "performanceBody": "Presupuestos de carga, imágenes optimizadas y el mínimo JavaScript necesario en el navegador."
+    }
+  },
+  "skills": {
+    "titleLead": "Mis",
+    "titleAccent": "habilidades",
+    "subtitle": "Con lo que trabajo, del navegador a la base de datos.",
+    "items": {
+      "html": "HTML",
+      "css": "CSS",
+      "scss": "SCSS",
+      "javascript": "JavaScript",
+      "typescript": "TypeScript",
+      "react": "React",
+      "angular": "Angular",
+      "tailwind": "Tailwind CSS",
+      "java": "Java",
+      "quarkus": "Quarkus",
+      "oracle": "Oracle Database",
+      "jdedwards": "JD Edwards"
+    },
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "data": "Datos y ERP"
+    }
+  },
+  "services": {
+    "titleLead": "Mis",
+    "titleAccent": "servicios",
+    "subtitle": "En qué puedo ayudarte.",
+    "items": {
+      "web": {
+        "title": "Desarrollo web",
+        "description": "Aplicaciones y sitios responsivos, accesibles y optimizados para buscadores."
+      },
+      "database": {
+        "title": "Bases de datos",
+        "description": "Diseño de esquemas, consultas eficientes e integridad de los datos."
+      }
+    }
+  },
+  "projects": {
+    "titleLead": "Mis",
+    "titleAccent": "proyectos",
+    "subtitle": "Una selección de lo que he construido.",
+    "viewSource": "Ver código",
+    "viewLive": "Ver en vivo",
+    "opensInNewTab": "(se abre en una pestaña nueva)",
+    "items": {
+      "clinicplus": {
+        "title": "ClinicPlus",
+        "description": "Plataforma de gestión de pacientes y agendamiento de citas médicas. Frontend en Next.js 16 con App Router, React 19 y Tailwind CSS, con portales separados para paciente y para personal médico. El backend (NestJS, PostgreSQL y Prisma) se desarrolla en un repositorio aparte.",
+        "imageAlt": "Portada del proyecto ClinicPlus, plataforma de gestión clínica"
+      },
+      "portfolio": {
+        "title": "Portafolio personal",
+        "description": "Este mismo sitio: Next.js 16, React 19 y TypeScript estricto, bilingüe, con validación de variables de entorno y cabeceras de seguridad.",
+        "imageAlt": "Captura del portafolio personal de Dennis Landaverde"
+      }
+    }
+  },
+  "contact": {
+    "titleAccent": "Contacto",
+    "titleTrail": "",
+    "subtitle": "Cuéntame en qué estás trabajando y te respondo lo antes posible.",
+    "form": {
+      "nameLabel": "Nombre completo",
+      "namePlaceholder": "Ada Lovelace",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "ada@ejemplo.com",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "Hola Dennis, me gustaría hablar sobre…",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando…",
+      "required": "obligatorio",
+      "charactersLeft": "{count} caracteres restantes"
+    },
+    "validation": {
+      "nameMin": "El nombre debe tener al menos 2 caracteres.",
+      "nameMax": "El nombre no puede superar los 80 caracteres.",
+      "emailInvalid": "Introduce un correo electrónico válido.",
+      "messageMin": "El mensaje debe tener al menos 10 caracteres.",
+      "messageMax": "El mensaje no puede superar los 2000 caracteres."
+    },
+    "status": {
+      "success": "¡Mensaje enviado! Te responderé pronto.",
+      "error": "No se pudo enviar el mensaje. Inténtalo de nuevo en unos minutos.",
+      "rateLimited": "Has enviado demasiados mensajes. Espera un momento antes de volver a intentarlo.",
+      "invalid": "Revisa los campos marcados y vuelve a intentarlo.",
+      "unavailable": "El formulario no está disponible ahora mismo. Escríbeme directamente por LinkedIn."
+    }
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "builtWith": "Construido con Next.js y Tailwind CSS.",
+    "backToTop": "Volver arriba"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o cambió de dirección.",
+    "cta": "Volver al inicio"
+  },
+  "error": {
+    "title": "Algo salió mal",
+    "description": "Se produjo un error inesperado. Puedes reintentar o volver al inicio.",
+    "retry": "Reintentar",
+    "home": "Ir al inicio"
+  }
+}
