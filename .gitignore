@@ -1,0 +1,61 @@
+# ─── Dependencias ────────────────────────────────────────────────
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/versions
+
+# ─── Build / caché ───────────────────────────────────────────────
+/.next/
+/out/
+/build
+/dist
+*.tsbuildinfo
+next-env.d.ts
+
+# ─── Variables de entorno (NUNCA commitear) ──────────────────────
+# Regla: se ignora todo .env* y se permite explícitamente la plantilla.
+.env
+.env.*
+!.env.example
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ─── Testing / cobertura ─────────────────────────────────────────
+/coverage
+/playwright-report
+/test-results
+
+# ─── Ficheros generados por `next dev` ───────────────────────────
+# `next dev` recrea estos dos ficheros de instrucciones para asistentes
+# de IA cada vez que se ejecuta. No forman parte del portafolio.
+AGENTS.md
+CLAUDE.md
+
+# ─── Plataformas ─────────────────────────────────────────────────
+.vercel
+.netlify
+
+# ─── Logs ────────────────────────────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ─── Editor / SO ─────────────────────────────────────────────────
+# macOS y `sips` generan copias con sufijo " 2" al escribir sobre un
+# fichero existente. Nunca deben acabar en el repositorio.
+* [0-9].*
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json

@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "title": "Dennis Landaverde — Software Engineer",
+    "titleTemplate": "%s · Dennis Landaverde",
+    "description": "Full stack Software Engineer. I build interfaces with Angular and React, services with Java and Quarkus, and enterprise systems on Oracle Database and JD Edwards.",
+    "keywords": "Dennis Landaverde, Software Engineer, Full Stack Developer, Angular, React, TypeScript, Java, Quarkus, Oracle Database, JD Edwards, El Salvador",
+    "ogAlt": "Dennis Landaverde — Software Engineer"
+  },
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "skipToContent": "Skip to main content",
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "localeSwitcher": {
+    "label": "Change language",
+    "current": "Current language: {locale}"
+  },
+  "theme": {
+    "label": "Toggle theme",
+    "light": "Light theme",
+    "dark": "Dark theme",
+    "system": "System theme"
+  },
+  "hero": {
+    "greeting": "Hi,",
+    "title": "Welcome",
+    "roleIntro": "I'm a",
+    "role": "Software Engineer",
+    "tagline": "I turn ideas into fast, accessible digital products built to last.",
+    "downloadCv": "Download CV",
+    "contactCta": "Let's talk",
+    "portraitAlt": "Dennis Landaverde, Software Engineer",
+    "socialLabel": "Social profiles"
+  },
+  "about": {
+    "titleLead": "About",
+    "titleAccent": "me",
+    "body": "Full stack software engineer. I build interfaces with Angular and React and back them with services in Java and Quarkus. On the enterprise side I work with Oracle Database and JD Edwards, where the challenge is not just writing code but understanding the business process behind it.",
+    "highlights": {
+      "focusTitle": "Product focus",
+      "focusBody": "Every technical decision is judged by what it gives the person using the product, not by what is trending.",
+      "qualityTitle": "Code quality",
+      "qualityBody": "Strict typing, reviews and tests: code someone else can still maintain a year from now.",
+      "performanceTitle": "Performance",
+      "performanceBody": "Loading budgets, optimized images and only the JavaScript the browser actually needs."
+    }
+  },
+  "skills": {
+    "titleLead": "My",
+    "titleAccent": "skills",
+    "subtitle": "What I work with, from the browser to the database.",
+    "items": {
+      "html": "HTML",
+      "css": "CSS",
+      "scss": "SCSS",
+      "javascript": "JavaScript",
+      "typescript": "TypeScript",
+      "react": "React",
+      "angular": "Angular",
+      "tailwind": "Tailwind CSS",
+      "java": "Java",
+      "quarkus": "Quarkus",
+      "oracle": "Oracle Database",
+      "jdedwards": "JD Edwards"
+    },
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "data": "Data & ERP"
+    }
+  },
+  "services": {
+    "titleLead": "My",
+    "titleAccent": "services",
+    "subtitle": "How I can help you.",
+    "items": {
+      "web": {
+        "title": "Web development",
+        "description": "Responsive, accessible and search-optimized applications and websites."
+      },
+      "database": {
+        "title": "Databases",
+        "description": "Schema design, efficient queries and data integrity."
+      }
+    }
+  },
+  "projects": {
+    "titleLead": "My",
+    "titleAccent": "projects",
+    "subtitle": "A selection of what I have built.",
+    "viewSource": "View source",
+    "viewLive": "View live",
+    "opensInNewTab": "(opens in a new tab)",
+    "items": {
+      "clinicplus": {
+        "title": "ClinicPlus",
+        "description": "Patient management and medical appointment scheduling platform. Front end built with Next.js 16 App Router, React 19 and Tailwind CSS, with separate portals for patients and clinical staff. The back end (NestJS, PostgreSQL and Prisma) lives in a separate repository.",
+        "imageAlt": "Cover image for ClinicPlus, a clinic management platform"
+      },
+      "portfolio": {
+        "title": "Personal portfolio",
+        "description": "This very site: Next.js 16, React 19 and strict TypeScript, bilingual, with validated environment variables and hardened security headers.",
+        "imageAlt": "Screenshot of Dennis Landaverde's personal portfolio"
+      }
+    }
+  },
+  "contact": {
+    "titleAccent": "Contact",
+    "titleTrail": "me",
+    "subtitle": "Tell me what you are working on and I will get back to you shortly.",
+    "form": {
+      "nameLabel": "Full name",
+      "namePlaceholder": "Ada Lovelace",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "ada@example.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Hi Dennis, I'd like to talk about…",
+      "submit": "Send message",
+      "submitting": "Sending…",
+      "required": "required",
+      "charactersLeft": "{count} characters left"
+    },
+    "validation": {
+      "nameMin": "Name must be at least 2 characters long.",
+      "nameMax": "Name cannot exceed 80 characters.",
+      "emailInvalid": "Enter a valid email address.",
+      "messageMin": "Message must be at least 10 characters long.",
+      "messageMax": "Message cannot exceed 2000 characters."
+    },
+    "status": {
+      "success": "Message sent! I'll get back to you soon.",
+      "error": "The message could not be sent. Please try again in a few minutes.",
+      "rateLimited": "You've sent too many messages. Please wait a moment before trying again.",
+      "invalid": "Please review the highlighted fields and try again.",
+      "unavailable": "The form is unavailable right now. Reach me directly on LinkedIn."
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Built with Next.js and Tailwind CSS.",
+    "backToTop": "Back to top"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has moved.",
+    "cta": "Back to home"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. You can retry or go back home.",
+    "retry": "Retry",
+    "home": "Go home"
+  }
+}
