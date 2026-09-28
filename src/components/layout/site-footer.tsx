@@ -56,11 +56,10 @@ export function SiteFooter() {
           })}
         </ul>
 
-        {/* ─── BLOQUE 3 · Tecnologías y volver arriba ───────────────
+        {/* ─── BLOQUE 3 · Volver arriba ─────────────────────────────
             El enlace «Volver arriba» apunta a #home, el id de la primera
             sección de la página. */}
-        <div className="flex flex-col items-center gap-3 sm:items-end">
-          <p className="text-muted text-xs">{t('builtWith')}</p>
+        <div className="flex flex-col items-center sm:items-end">
           <a
             href="#home"
             className="text-muted hover:text-accent hover:bg-accent-soft inline-flex min-h-11 items-center gap-1.5 rounded-full px-3 text-xs font-semibold transition-colors"
