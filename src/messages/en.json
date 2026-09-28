@@ -144,7 +144,6 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "builtWith": "Built with Next.js and Tailwind CSS.",
     "backToTop": "Back to top"
   },
   "notFound": {
