@@ -136,7 +136,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
-      creator: '@dennis_land10',
+      creator: '@dglandaverde',
     },
 
     robots: {

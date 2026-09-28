@@ -71,8 +71,8 @@ export const socialLinks: ReadonlyArray<{
     href: 'https://www.linkedin.com/in/dennislandaverde/',
   },
   { platform: 'github', label: 'GitHub', href: 'https://github.com/dglandaverde' },
-  { platform: 'x', label: 'X', href: 'https://x.com/dennis_land10' },
-  { platform: 'instagram', label: 'Instagram', href: 'https://instagram.com/dennislandaverde' },
+  { platform: 'x', label: 'X', href: 'https://x.com/dglandaverde' },
+  { platform: 'instagram', label: 'Instagram', href: 'https://instagram.com/dglandaverde' },
 ] as const;
 
 /* ─── Habilidades ────────────────────────────────────────────── */
