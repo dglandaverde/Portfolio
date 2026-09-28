@@ -264,7 +264,7 @@ Para contribuir a estas mejoras:
 
 **Dennis Fuentes**  
 DevOps Enterprise Architect  
-Portfolio: https://github.com/dennislandaverde/Portfolio
+Portfolio: https://github.com/dglandaverde/Portfolio
 
 ---
 
